@@ -10,4 +10,4 @@ JavaFX UI: Clean, responsive interface for seamless chatting.
 
 Customizable: Easily switch between different local LLM models.
 
-![the UI](path/to/ASKK.jpg)
+![the UI](ASKK.jpg)
