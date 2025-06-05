@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.util.Callback?>
+<HBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.projetjavafx.ChatController" spacing="10" stylesheets="@styles.css">
+
+  <!-- Sidebar for conversation history -->
+  <VBox prefWidth="200" spacing="10" styleClass="sidebar">
+    <Label text="Conversations" styleClass="sidebar-title" />
+    <Button text="+ New Chat" onAction="#newConversation" styleClass="new-chat-button" />
+    <Button text="🗑 Supprimer" onAction="#deleteConversation" styleClass="delete-chat-button" />
+    <ListView fx:id="conversationListView" styleClass="conversation-list" VBox.vgrow="ALWAYS"/>
+    <Separator styleClass="sidebar-separator" />
+  </VBox>
+
+  <!-- Main chat area -->
+  <VBox spacing="10" HBox.hgrow="ALWAYS">
+
+    <TextArea fx:id="outputArea" editable="false" wrapText="true" prefHeight="400" VBox.vgrow="ALWAYS"/>
+    <HBox spacing="10" alignment="CENTER">
+      <Button fx:id="btnFeedbackUtile" text="👍 Utile" />
+      <Button fx:id="btnFeedbackInutile" text="👎 Inutile" />
+    </HBox>
+    <HBox spacing="10">
+      <TextField fx:id="inputField" promptText="Type your message here..." HBox.hgrow="ALWAYS"/>
+      <Button fx:id="sendButton" text="Send" defaultButton="true"/>
+    </HBox>
+    <Button fx:id="btnEscalade" text="Contacter un technicien" visible="false" onAction="#handleEscalation" />
+
+  </VBox>
+</HBox>

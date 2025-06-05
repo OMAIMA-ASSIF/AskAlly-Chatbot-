@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // OkHttp pour les requêtes HTTP
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
+    // JSON.org pour le traitement JSON
+    implementation 'org.json:json:20240303'
+
+    // JavaFX dépendances (ajustez selon vos besoins)
+    implementation 'org.openjfx:javafx-controls:21'
+    implementation 'org.openjfx:javafx-fxml:21'
+}
+
+javafx {
+    version = "23"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+mainClassName = 'com.votrepackage.MainApp' // Ajustez selon votre classe principale

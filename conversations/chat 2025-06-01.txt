@@ -1,0 +1,4 @@
+
+You: salut
+AskAlly: Salut ! Comment vas-tu ?
+Système: L'utilisateur a demandé une escalation vers un technicien humain.
